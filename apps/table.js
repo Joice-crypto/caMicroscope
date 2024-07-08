@@ -328,7 +328,7 @@ function initialize() {
                         </button>
                       ` :
                     `
-                        <button aria-label="Download"  disabled type='button' class='btn btn-danger btn-sm tooltipCustom' id='deleteBtn'>
+                        <button aria-label="Delete"  disabled type='button' class='btn btn-danger btn-sm tooltipCustom' id='deleteBtn'>
                           <span class="tooltiptextCustom p-1">Delete requested by ${slideDeleteRequests.find((o) => o.slideDetails.slideId === rs[0]) ? slideDeleteRequests.find((o) => o.slideDetails.slideId === rs[0]).requestedBy : ''}</span>
                           Delete Requested <i class='fas fa-trash-alt' ></i>
                         </button>
@@ -336,7 +336,7 @@ function initialize() {
                   }
                   ` :
                   `
-                    <button arial-label="Delete" type='button' class='btn btn-danger btn-sm DelButton' id='deleteBtn' data-id='${sanitize(rs[0])}' data-name='${sanitize(rs[1])}' onclick='deleteSld(this)' data-filename='${sanitize(filename)}' data-toggle='modal'>
+                    <button aria-label="Delete" type='button' class='btn btn-danger btn-sm DelButton' id='deleteBtn' data-id='${sanitize(rs[0])}' data-name='${sanitize(rs[1])}' onclick='deleteSld(this)' data-filename='${sanitize(filename)}' data-toggle='modal'>
                       ${permissions.slide.delete == true ? '' : 'Request Deletion'} <i class='fas fa-trash-alt' ></i>
                     </button>
                   `

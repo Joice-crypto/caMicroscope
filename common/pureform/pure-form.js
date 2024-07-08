@@ -1851,7 +1851,7 @@
 
             // check required status
             if (!ignoreRequired && schemaItem.required && ((schemaItem.type !== 'boolean' && !value) || (Array.isArray(value) && value.length <= 0))) {
-                return "Please provide a name for the annotation. The name should be descriptive and unique";
+                return "Please provide a name for the annotation. The name should be descriptive and uniqu";
             }
 
             if (schemaItem.minItems && (Array.isArray(value) && value.length < schemaItem.minItems)) {
